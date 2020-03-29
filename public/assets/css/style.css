@@ -1,4 +1,32 @@
 .burgerEat {
     size: 30px;
     color: brown;
+    font-weight: bold;
+}
+
+#burgMenu {
+    float: left;
+    width: 50%;
+    background-color: rgba(190, 192, 72, 0.4);
+    color: #F5F5DC;
+}
+
+#burgDevoured {
+    color: #F5F5DC;
+    float: right;
+    width: 50%;
+    background-color: rgba(196, 34, 34, 0.4);
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+body {
+    background-image: url(./images/woodwall.jpg);
+}
+
+.create-form {
+    float: left;
+    align-items: center;
 }

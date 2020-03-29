@@ -1,3 +1,6 @@
+<div id="burgMenu">
+
+
 <h2>The Burger Menu!</h2>
 
 <ul>
@@ -12,6 +15,16 @@
     {{/unless}}
   {{/each}}
 </ul>
+<form action="/burgers/create" method="post" class="create-form" style="text-align: center;">
+  <div class="form-group">
+    <p>Type in the name of your next burger, and hit enter!</p>
+    <label for="ca">Add a Burger!:</label>
+    <input type="text" id="burg" name="name">
+  </div>
+</div>
+
+
+<div id="burgDevoured">
 
 <h3> Devoured! </h3>
 <ul>
@@ -27,8 +40,5 @@
   {{/each}}
 </ul>
 
-<form action="/burgers/create" method="post" class="create-form">
-  <div class="form-group">
-    <label for="ca">Add a Burger!:</label>
-    <input type="text" id="burg" name="name">
-  </div>
+</div>
+
