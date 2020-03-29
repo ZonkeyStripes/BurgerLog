@@ -12,7 +12,6 @@ if(process.env.JAWSDB_URL){
     });
 }
 
-
 connection.connect(function(error) {
     if (error) {
         console.error("Opps!! =>", error.stack);

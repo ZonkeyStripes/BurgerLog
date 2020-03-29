@@ -3,7 +3,7 @@ const connection = require("../config/connection.js");
 let orm = {
     all: function(tableInput, cb) {
         let queryString = "SELECT * FROM " + tableInput + ";";
-        console.log(queryString)
+        // console.log(queryString)
         connection.query(queryString, function(err, result) {
             if (err){
                 throw err
@@ -13,7 +13,7 @@ let orm = {
     },
 
     insert: function(name, cb) {
-        let queryString = "INSERT INTO burgers (burger_name)VALUES ";
+        let queryString = "INSERT INTO burgers (burger_name) VALUES ";
 
         queryString += `('${name}');`;
 
@@ -34,6 +34,16 @@ let orm = {
             cb(result);
         });
     },
+// testing
+    delete: function(ID, cb) {
+        let queryString = `DELETE from burgers WHERE ID = ?`;
+        connection.query(queryString, [ID], function(error, result) {
+            if(error) {
+                throw error;
+            }
+            cb(result);
+        });
+    }
 }
 
 module.exports = orm;
